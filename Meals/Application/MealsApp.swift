@@ -4,7 +4,10 @@ import SwiftUI
 struct MealsApp: App {
     var body: some Scene {
         WindowGroup {
-            MealsViews()
+            NavigationView {
+                MealsViews()
+                    .navigationTitle("Meals")
+            }
         }
     }
 }
