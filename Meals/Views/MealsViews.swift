@@ -2,7 +2,8 @@ import SwiftUI
 
 struct MealsViews: View {
     @State var searchText = ""
-    @State var isVisibleSearchBar = true
+    
+    @ObservedObject var viewModel = MealsViewModels()
     
     var body: some View {
         VStack {
@@ -39,11 +40,10 @@ struct MealsViews: View {
                             .padding(.leading, 16.0)
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 32.0) {
-                                ForEach(0..<3) { i in
+                                ForEach(0..<1) { i in
                                     VStack(alignment: .leading) {
                                         ZStack {
-                                            Image("beef-stroganoff")
-                                                .resizable()
+                                            AsyncImage(url: URL(string: viewModel.randomMeal?.strMealThumb ?? ""))
                                                 .aspectRatio(contentMode: .fill)
                                                 .frame(width: 257.0, height: 419.0)
                                                 .clipped()
@@ -61,10 +61,10 @@ struct MealsViews: View {
                                                 }
                                             }
                                         }
-                                        Text("Beef Stroganoff")
+                                        Text(viewModel.randomMeal == nil ? " " : viewModel.randomMeal!.strMeal)
                                             .font(.system(size: 16.0, weight: .semibold))
                                             .padding(.top, 8.0)
-                                        Text("Russian")
+                                        Text(viewModel.randomMeal == nil ? " " : viewModel.randomMeal!.strArea)
                                             .font(.system(size: 16.0, weight: .semibold))
                                             .foregroundColor(.black.opacity(0.5))
                                     }
