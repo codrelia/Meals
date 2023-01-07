@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CustomTabBar: View {
+struct TabBar: View {
     @State var chefSelected = true
     
     var body: some View {
@@ -41,7 +41,7 @@ struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Spacer()
-            CustomTabBar()
+            TabBar()
         }
     }
 }
