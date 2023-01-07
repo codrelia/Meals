@@ -34,6 +34,7 @@ struct TabBar: View {
         }
         .padding([.horizontal], 10)
         .padding(.bottom, 8)
+        .background(Color.clear)
     }
 }
 
