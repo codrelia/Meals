@@ -8,6 +8,7 @@ struct TabBar: View {
             RoundedRectangle(cornerRadius: 40.0)
                 .frame(height: 80.0)
                 .foregroundColor(Color("tabbar-background"))
+                .shadow(color: .gray, radius: 3.0, x: 0.0, y: 0.0)
             HStack() {
                 Button(action: {
                     chefSelected = true
@@ -32,9 +33,7 @@ struct TabBar: View {
                 })
             }
         }
-        .padding([.horizontal], 10)
-        .padding(.bottom, 8)
-        .background(Color.clear)
+        //.offset(y: 20)
     }
 }
 
