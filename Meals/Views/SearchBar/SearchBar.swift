@@ -1,7 +1,12 @@
 import SwiftUI
 
 struct SearchBar: View {
+    // MARK: - STATE PROPERTIES
+    
     @State var textField = ""
+    
+    // MARK: - MAIN BODY
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10.0)
@@ -32,6 +37,7 @@ struct SearchBar: View {
     }
 }
 
+// MARK: - Preview
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         SearchBar()

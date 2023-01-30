@@ -1,13 +1,22 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    // MARK: - STATE PROPERTIES
+    
     @State var searchText = ""
     
+    // MARK: - OBSERVED_OBJECTS
     @ObservedObject var viewModel = MealsViewModels()
     
+    
+    // MARK: - MAIN BODY
     var body: some View {
-        NavigationView {
-            ZStack {
+        ZStack(alignment: .top) {
+            Color.primary
+                .edgesIgnoringSafeArea(.all)
+                .zIndex(0)
+            NavigationView {
                 VStack(spacing: 0.0) {
                     ScrollView {
                         SearchBar()
@@ -24,12 +33,28 @@ struct MainView: View {
                             }
                         }
                     }
+                    .refreshable {
+                        viewModel.takeRandomMeal()
+                    }
                 }
+                .navigationTitle("Meals")
             }
-            .navigationTitle("Meals")
+            .zIndex(1)
+            if (viewModel.errorMessage != nil) {
+                ErrorView()
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .top),
+                        removal: .slide))
+                    .animation(.spring())
+                    .zIndex(2)
+            } else {
+                
+            }
         }
     }
 }
+
+// MARK: - PREVIEW
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    // MARK: - MAIN BODY
+    
     var body: some View {
         NavigationView {
             Text("Favorites")
@@ -8,6 +10,8 @@ struct FavoritesView: View {
         }
     }
 }
+
+// MARK: - PREVIEW
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {

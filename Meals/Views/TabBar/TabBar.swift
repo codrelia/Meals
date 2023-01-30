@@ -1,10 +1,20 @@
 import SwiftUI
 
+// MARK: - The basis of TabBar
 struct TabBar: View {
+    // MARK: - STATE PROPERTIES
+    
     @State var chefSelected = true
+    
+    // MARK: - BINDING PROPERTIES
+    
     @Binding var selectedTab: String
     
+    // MARK: - PROPERTIES
+    
     var tabBarItems = ["Meals", "Favorites"]
+    
+    // MARK: - MAIN BODY
     
     var body: some View {
         ZStack {
@@ -15,7 +25,9 @@ struct TabBar: View {
                 .shadow(color: .gray, radius: 3.0, x: 0.0, y: 0.0)
             HStack() {
                 ForEach(tabBarItems, id: \.self) { tab in
+                    Spacer()
                     TabItem(tab: tab, selectedTab: $selectedTab)
+                    Spacer()
                 }
             }
         }
@@ -23,9 +35,16 @@ struct TabBar: View {
     }
 }
 
+// MARK: - Items on the TabBar
 struct TabItem: View {
+    // MARK: - STATE PROPERTIES
+    
     @State var tab: String
+    
+    // MARK: - BINDING PROPERTIES
     @Binding var selectedTab: String
+    
+    // MARK: - MAIN BODY
     
     var body: some View {
         ZStack {
@@ -54,6 +73,8 @@ struct TabItem: View {
         }
     }
 }
+
+// MARK: - PREVIEW
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
