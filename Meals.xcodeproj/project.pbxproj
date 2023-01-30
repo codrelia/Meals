@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B5E65C529880CD7005282BC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E65C429880CD7005282BC /* TabBarView.swift */; };
 		3B5E65C729881018005282BC /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E65C629881018005282BC /* TabItems.swift */; };
+		3B5E65CA2988261A005282BC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E65C92988261A005282BC /* ErrorView.swift */; };
 		3B6EB3B22969783000F0AD03 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EB3B12969783000F0AD03 /* TabBar.swift */; };
 		3B6EB3B529698AF600F0AD03 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EB3B429698AF600F0AD03 /* SearchBar.swift */; };
 		3B6EB3B82969B95D00F0AD03 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EB3B72969B95D00F0AD03 /* Categories.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3B5E65C429880CD7005282BC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3B5E65C629881018005282BC /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
+		3B5E65C92988261A005282BC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		3B6EB3B12969783000F0AD03 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		3B6EB3B429698AF600F0AD03 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3B6EB3B72969B95D00F0AD03 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5E65C82988260B005282BC /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				3B5E65C92988261A005282BC /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
 		3B6EB3B02969781800F0AD03 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		3BD08C782968CAF500CE56ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B5E65C82988260B005282BC /* ErrorView */,
 				3BCF63C9296B0EA800378904 /* RandomDishes */,
 				3BCF63C6296B0E3D00378904 /* Categories */,
 				3B6EB3B329698A9A00F0AD03 /* SearchBar */,
@@ -263,6 +274,7 @@
 				3BA6A8292969D228004094E4 /* MealsViewModels.swift in Sources */,
 				3BA6A82E2969D2CC004094E4 /* NetworkConnection.swift in Sources */,
 				3BA6A8302969D38E004094E4 /* MainModel.swift in Sources */,
+				3B5E65CA2988261A005282BC /* ErrorView.swift in Sources */,
 				3B6EB3B22969783000F0AD03 /* TabBar.swift in Sources */,
 				3BCF63C8296B0E4A00378904 /* CategoriesView.swift in Sources */,
 				3BA6A82B2969D276004094E4 /* Urls.swift in Sources */,

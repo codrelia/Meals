@@ -1,6 +1,10 @@
 import SwiftUI
 
+// MARK: - ScrollView with all possible product categories
+
 struct CategoriesView: View {
+    // MARK: - MAIN BODY
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Categories")
@@ -26,6 +30,8 @@ struct CategoriesView: View {
         }
     }
 }
+
+// MARK: - PREVIEW
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {

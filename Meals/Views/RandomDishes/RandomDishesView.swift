@@ -1,9 +1,17 @@
 import SwiftUI
 
+// MARK: - General View for random dishes
+
 struct RandomDishesView: View {
+    // MARK: - OBSERVED_OBJECT PROPERTIES
+    
     @ObservedObject var viewModel: MealsViewModels
+    
+    // MARK: - STATE PROPERTIES
+    
     @State var isFavorite = false
     
+    // MARK: - MAIN BODY
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 32.0) {
@@ -19,9 +27,19 @@ struct RandomDishesView: View {
     }
 }
 
+// MARK: - One card for a dish
+
 struct CardDishes: View {
+    // MARK: - BINDING PROPERTIES
+    
     @Binding var isFavorite: Bool
+    
+    // MARK: - PROPERTIES
+    
     var currentDishes: Meal?
+    
+    
+    // MARK: - MAIN BODY
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -60,6 +78,8 @@ struct CardDishes: View {
         }
     }
 }
+
+// MARK: - PREVIEW
 
 struct RandomDishesView_Preview: PreviewProvider {
     static var previews: some View {

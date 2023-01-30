@@ -1,23 +1,25 @@
 import SwiftUI
 
 struct TabBarView: View {
-    var tabBarItems = ["Meals", "Favorites"]
     
-    @State var selectedTab: String = "1"
+    // MARK: - STATE PROPERTIES
     
+    @State var selectedTab: String = "Meals"
+    
+    // MARK: - INITIALIZATION
     init() {
         UITabBar.appearance().isHidden = true
     }
     
+    // MARK: - MAIN BODY
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
                 TabView(selection: $selectedTab) {
                     MainView()
-                        .tag("1")
+                        .tag("Meals")
                     FavoritesView()
-                        .navigationTitle("Favorites")
-                        .tag("2")
+                        .tag("Favorites")
                 }
             }
             TabBar(selectedTab: $selectedTab)
@@ -25,6 +27,7 @@ struct TabBarView: View {
     }
 }
 
+// MARK: - PREVIEW
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
