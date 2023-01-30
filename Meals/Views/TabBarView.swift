@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    var tabBarItems = ["Meals", "Favorites"]
-    
-    @State var selectedTab: String = "1"
+    @State var selectedTab: String = "Meals"
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -14,10 +12,9 @@ struct TabBarView: View {
             VStack {
                 TabView(selection: $selectedTab) {
                     MainView()
-                        .tag("1")
+                        .tag("Meals")
                     FavoritesView()
-                        .navigationTitle("Favorites")
-                        .tag("2")
+                        .tag("Favorites")
                 }
             }
             TabBar(selectedTab: $selectedTab)
