@@ -40,15 +40,13 @@ struct MainView: View {
                 .navigationTitle("Meals")
             }
             .zIndex(1)
-            if (viewModel.errorMessage != nil) {
-                ErrorView()
+            if let error = viewModel.errorMessage{
+                ErrorView(errorMessage: error)
                     .transition(.asymmetric(
                         insertion: .move(edge: .top),
                         removal: .slide))
                     .animation(.spring())
                     .zIndex(2)
-            } else {
-                
             }
         }
     }

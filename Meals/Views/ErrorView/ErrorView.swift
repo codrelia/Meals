@@ -2,6 +2,9 @@ import SwiftUI
 
 // MARK: - View for connection error displays
 struct ErrorView: View {
+    // MARK: - PROPERTIES
+    @State var errorMessage: String
+    
     // MARK: - MAIN BODY
     
     var body: some View {
@@ -24,7 +27,7 @@ struct ErrorView: View {
                         .foregroundColor(Color("error-color"))
                         .font(.system(size: 16.0))
                         .fontWeight(.medium)
-                    Text("Internet connection error! Please try again.")
+                    Text(errorMessage)
                         .fontWeight(.light)
                         .font(.system(size: 12.0))
                         .foregroundColor(.secondary)
@@ -41,6 +44,6 @@ struct ErrorView: View {
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView()
+        ErrorView(errorMessage: "Internet connection error! Please try again!")
     }
 }
